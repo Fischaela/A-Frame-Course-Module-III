@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <title>A-Frame Xylophone Simulation</title>
     <meta name="description" content="A-Frame Xylophone Simulation">
-    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
     <script src="https://unpkg.com/aframe-animation-component@4.0.0/dist/aframe-animation-component.min.js"></script>
+    <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
     <script src="components/sound.js"></script>
     <script src="components/xylophone.js"></script>
   </head>
@@ -16,6 +18,7 @@
         <a-asset-item id="rocket-obj" src="assets/flyingsacuer.obj"></a-asset-item>
         <a-asset-item id="rocket-mtl" src="assets/flyingsacuer.mtl"></a-asset-item>
       </a-assets>
+      <a-entity progressive-controls="objects: a-box"></a-entity>
       <a-xylophone position="-0.2 1.2 -0.6"></a-xylophone>
       <a-obj-model src="#rocket-obj" mtl="#rocket-mtl" position="3 2 -4" shadow="cast: true;"
         animation__anim-rot="property: rotation; autoplay: true; from: 0 0 0; to: 0 360 0; dur: 10000; loop: true; easing: linear;"

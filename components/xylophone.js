@@ -37,6 +37,7 @@ AFRAME.registerComponent('xylophone', {
       let frequency = frequencies[i];
 
       bar.setAttribute('color', colors[i]);
+      bar.setAttribute('clickable');
       bar.setAttribute('shadow', 'cast: true; receive: false');
       bar.setAttribute('depth', depth);
       bar.setAttribute('width', 0.05);
