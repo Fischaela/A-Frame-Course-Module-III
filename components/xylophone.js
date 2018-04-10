@@ -2,7 +2,7 @@ AFRAME.registerComponent('xylophone', {
   schema: {
     position: {type: 'vec3'}
   },
-  init: {
+  init: function () {
     const colors = [
       'crimson',
       'tomato',
@@ -14,7 +14,7 @@ AFRAME.registerComponent('xylophone', {
       'mediumslateblue'
     ];
     let barGroup = document.createElement('a-entity');
-    barGroup.object3D.el.position = this.data.position;
+    barGroup.setAttribute('position', this.data.position);
 
     for (let i = 0, iMax = 8; i < iMax; i += 1) {
       let bar = document.createElement('a-box');
@@ -26,7 +26,7 @@ AFRAME.registerComponent('xylophone', {
       bar.setAttribute('depth', depth);
       bar.setAttribute('width', 0.05);
       bar.setAttribute('height', 0.01);
-      bar.object3D.el.position =positionX + ' 0 0';
+      bar.setAttribute('position', positionX + ' 0 0' );
       barGroup.append(bar);
     }
 
