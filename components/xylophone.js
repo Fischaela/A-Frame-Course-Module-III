@@ -15,6 +15,12 @@ AFRAME.registerComponent('xylophone', {
     ];
     let barGroup = document.createElement('a-entity');
     barGroup.setAttribute('position', this.data.position);
+
+    for (let i = 0, iMax = 8; i < iMax; i += 1) {
+      let bar = document.createElement('a-box')
+      barGroup.append(bar);
+    }
+
     this.el.appendChild(barGroup);
   }
 });
