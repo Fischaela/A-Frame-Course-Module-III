@@ -15,12 +15,13 @@
   <body>
     <a-scene shadow="type: pcfsoft" cursor="rayOrigin: mouse">
       <a-assets>
-        <a-asset-item id="rocket-obj" src="assets/flyingsacuer.obj"></a-asset-item>
-        <a-asset-item id="rocket-mtl" src="assets/flyingsacuer.mtl"></a-asset-item>
+        <a-asset-item id="ufo-obj" src="assets/flyingsacuer.obj"></a-asset-item>
+        <a-asset-item id="ufo-mtl" src="assets/flyingsacuer.mtl"></a-asset-item>
       </a-assets>
       <a-entity progressive-controls="objects: a-box"></a-entity>
       <a-xylophone position="-0.2 1.2 -0.6"></a-xylophone>
-      <a-obj-model src="#rocket-obj" mtl="#rocket-mtl" position="3 2 -4" shadow="cast: true;"
+      <a-box shadow="receive: true;" position="0 0.5 -0.6" rotation="0 45 0" scale="0.5 1.3 0.5" color="#6a2849"></a-box>
+      <a-obj-model src="#ufo-obj" mtl="#ufo-mtl" position="3 2 -4" shadow="cast: true;"
         animation__anim-rot="property: rotation; autoplay: true; from: 0 0 0; to: 0 360 0; dur: 10000; loop: true; easing: linear;"
         animation__anim-pos="property: position; autoplay: true; from: 6 2.5 -6; to: -6 2 -6; dur: 30000; loop: true; dir: alternate">
       </a-obj-model>
