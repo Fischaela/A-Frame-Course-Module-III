@@ -6,6 +6,7 @@
     <meta name="description" content="A-Frame Xylophone Simulation">
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@4.0.0/dist/aframe-animation-component.min.js"></script>
   </head>
   <body>
     <a-scene shadow="type: pcfsoft">
@@ -13,9 +14,12 @@
         <a-asset-item id="rocket-obj" src="assets/flyingsacuer.obj"></a-asset-item>
         <a-asset-item id="rocket-mtl" src="assets/flyingsacuer.mtl"></a-asset-item>
       </a-assets>
-      <a-obj-model src="#rocket-obj" mtl="#rocket-mtl" position="3 2 -4" shadow="cast: true;">
+      <a-obj-model src="#rocket-obj" mtl="#rocket-mtl" position="3 2 -4" shadow="cast: true;"
+        animation__anim-rot="property: rotation; autoplay: true; from: 0 0 0; to: 0 360 0; dur: 10000; loop: true; easing: linear;"
+        animation__anim-pos="property: position; autoplay: true; from: 6 2.5 -6; to: -6 2 -6; dur: 30000; loop: true; dir: alternate">
       </a-obj-model>
       <a-entity environment="preset: tron; ground: flat; dressingAmount: 10; flatShading: true; skyColor: #39cc89; horizonColor: #cc58a9; groundColor: #222222; gridColor: #39cc89; shadow: true; skyType: gradient;"></a-entity>
     </a-scene>
   </body>
 </html>
+
