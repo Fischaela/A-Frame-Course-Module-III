@@ -8,8 +8,14 @@
     <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
   </head>
   <body>
-    <a-scene>
-      <a-entity environment="preset: tron; ground: flat; dressingAmount: 10; flatShading: true; skyColor: #39cc89; horizonColor: #cc58a9; groundColor: #222222; gridColor: #39cc89; shadow: true; skyType: gradient; lightPosition: -0.72 1.7 -0.6"></a-entity>
+    <a-scene shadow="type: pcfsoft">
+      <a-assets>
+        <a-asset-item id="rocket-obj" src="assets/flyingsacuer.obj"></a-asset-item>
+        <a-asset-item id="rocket-mtl" src="assets/flyingsacuer.mtl"></a-asset-item>
+      </a-assets>
+      <a-obj-model src="#rocket-obj" mtl="#rocket-mtl" position="3 2 -4" shadow="cast: true;">
+      </a-obj-model>
+      <a-entity environment="preset: tron; ground: flat; dressingAmount: 10; flatShading: true; skyColor: #39cc89; horizonColor: #cc58a9; groundColor: #222222; gridColor: #39cc89; shadow: true; skyType: gradient;"></a-entity>
     </a-scene>
   </body>
 </html>
