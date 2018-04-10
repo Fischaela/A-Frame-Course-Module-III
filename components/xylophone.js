@@ -1,4 +1,6 @@
 AFRAME.registerComponent('xylophone', {
-  schema: {},
+  schema: {
+    position: {type: 'vec3'}
+  },
   init: {}
 });
