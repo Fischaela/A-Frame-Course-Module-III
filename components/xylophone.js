@@ -27,6 +27,8 @@ AFRAME.registerComponent('xylophone', {
       bar.setAttribute('width', 0.05);
       bar.setAttribute('height', 0.01);
       bar.setAttribute('position', positionX + ' 0 0' );
+      bar.setAttribute('animation__anim-hit', 'property: scale; startEvents: mousedown; from: 1 1 1; to: 0.95 0.95 0.95; dur: 100; easing: linear;');
+      bar.setAttribute('animation__anim-bounceback', 'property: scale; startEvents: mouseup; from: 0.95 0.95 0.95; to: 1 1 1; dur: 100; easing: linear;');
       barGroup.append(bar);
     }
 
