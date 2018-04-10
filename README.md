@@ -1,6 +1,6 @@
-# VR Drum Simulation
+# VR Xylophone Simulation
 
-A VR drum simulation built with [A-Frame](https://aframe.io).
+A VR xylophone simulation built with [A-Frame](https://aframe.io).
 
 ## Setup
 
@@ -8,5 +8,3 @@ A VR drum simulation built with [A-Frame](https://aframe.io).
 npm install
 npm run start
 ```
-
-
