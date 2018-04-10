@@ -53,3 +53,12 @@ AFRAME.registerComponent('xylophone', {
     this.el.appendChild(barGroup);
   }
 });
+
+AFRAME.registerPrimitive('a-xylophone', {
+  defaultComponents: {
+    xylophone: {}
+  },
+  mappings: {
+    position: 'xylophone.position'
+  }
+});
