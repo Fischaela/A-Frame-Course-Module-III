@@ -13,5 +13,8 @@ AFRAME.registerComponent('xylophone', {
       'royalblue',
       'mediumslateblue'
     ];
+    let barGroup = document.createElement('a-entity');
+    barGroup.setAttribute('position', this.data.position);
+    this.el.appendChild(barGroup);
   }
 });
